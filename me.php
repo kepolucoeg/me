@@ -25,7 +25,7 @@ $app->post('/', function ($request, $response)
 		return $response->withStatus(400, 'Signature not set');
 	}
 	// is this request comes from LINE?
-	if($_ENV['PASS_SIGNATURE'] == false && ! SignatureValidator::validateSignature($body, $_ENV['CHANNEL_SECRET'], $signature)){
+	if($_ENV['PASS_SIGNATURE'] == false && ! SignatureValidator::validateSignature($body, $_ENV['648255d1496f65618e51216e72bd641e'], $signature)){
 		return $response->withStatus(400, 'Invalid signature');
 	}
 	// init bot
