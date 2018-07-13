@@ -44,6 +44,7 @@ $app->post('/', function ($request, $response)
 		
 		}
 	}
+	foreach ($data['events'] as $event)
 	{
 		$userMessage = $event['message']['text'];
 		if(strtolower($userMessage) == '01')
