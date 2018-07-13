@@ -29,8 +29,8 @@ $app->post('/', function ($request, $response)
 		return $response->withStatus(400, 'Invalid signature');
 	}
 	// init bot
-	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($_ENV['CHANNEL_ACCESS_TOKEN']);
-	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $_ENV['CHANNEL_SECRET']]);
+	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($_ENV['JSXOCrV1VdnmumUo8UzQogQ49ecXbarYlrzJsjNx9mtbGe8DI/RpRD6SnDdxcz31T5FomVTTVmZXcPnX8sMAlzKuSBYYWg/zYAoHKrzQJIk3+F+VVP0w5zQS7K90G7kiqG/zexnVxcgUgCbmmerShwdB04t89/1O/w1cDnyilFU=']);
+	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $_ENV['648255d1496f65618e51216e72bd641e']]);
 	$data = json_decode($body, true);
 	foreach ($data['events'] as $event)
 	{
